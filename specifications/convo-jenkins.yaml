@@ -1,0 +1,115 @@
+info:
+  version: 0.9.0
+  title: jenkins
+  description: Convo specification for Jenkins
+  license:
+    name: MIT
+  contact:
+    name: Cliffano Subagio
+    url: http://blog.cliffano.com
+    email: blah@cliffano.com
+  primary_language: en
+  timezone: Australia/Sydney
+middlewares:
+  openapi_cloudfunctions:
+    openapi:
+      node_modules:
+        api: swaggy-jenkins
+        helper: convo-jenkins-helper
+    cloudfunctions:
+      project_id: convo-jenkins
+    dependencies:
+      - name: swaggy-jenkins
+        version: 1.0.0
+      - name: convo-jenkins-helper
+        version: 0.0.1
+agents:
+  dialogflow:
+    project_id: convo-jenkins
+conversations:
+  greetings:
+    replies:
+      en:
+        - Hello, I am Jenkins
+        - How can I help you?
+      en-au:
+        - G'day mate, I am Jenkins
+        - How can I help you?
+      de:
+        - Guten Tag, ich bin Jenkins
+      ja:
+        - こんにちは、私はジェンキンスです
+  unknowns:
+    replies:
+      en:
+        - Sorry, I do not understand what you said.
+        - Could you perhaps say that again?
+      en-au:
+        - Sorry, I do not understand what you said.
+        - Could you perhaps say that again?
+      de:
+        - Entschuldigung, ich verstehe nicht, was du gesagt hast.
+        - Koenntest du das Bitte wiederholen?
+      ja:
+        - すみません理解不能です
+  queries:
+    - name: Find out current version
+      messages:
+        en:
+          - What's your current version?
+          - Tell me the version installed on you
+        en-au:
+          - What's your current version?
+          - Tell me the version installed on you
+        ja:
+          - あなたの現在のバージョンは何ですか？
+      replies:
+        en:
+          - My current version is {{headers.x-jenkins}}
+          - I am on version {{headers.x-jenkins}}
+        en-au:
+          - My current version is {{headers.x-jenkins}}
+          - I am on version {{headers.x-jenkins}}
+        ja:
+          - 私の現在のバージョンは{{headers.x-jenkins}}です
+      openapi_cloudfunctions:
+        operation_id: headJenkins
+    - name: Find out how many executors
+      messages:
+        en:
+          - How many executors do you have?
+        en-au:
+          - How many executors do you have?
+      replies:
+        en:
+          - I have {{data.totalExecutors}} executors
+        en-au:
+          - I have {{data.totalExecutors}} executors
+      openapi_cloudfunctions:
+        operation_id: getComputer
+    - name: Find out how many busy executors
+      messages:
+        en:
+          - How many of your executors are busy?
+        en-au:
+          - How many of your executors are busy?
+      replies:
+        en:
+          - I have {{data.busyExecutors}} executors
+        en-au:
+          - I have {{data.busyExecutors}} executors
+      openapi_cloudfunctions:
+        operation_id: getComputer
+    - name: Build job
+      messages:
+        en:
+          - Build job {{jobName}}
+          - Build a job named {{jobName}}
+        en-au:
+          - Build job {{jobName}}
+          - Build a job named {{jobName}}
+      replies:
+        en-au:
+          - Job {{jobName}} has been added to the queue
+      openapi_cloudfunctions:
+        operation_id: postJobBuild

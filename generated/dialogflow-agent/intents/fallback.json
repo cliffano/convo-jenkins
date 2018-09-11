@@ -1,0 +1,72 @@
+{
+  "name": "Fallback",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+      
+        {
+          "type": "simple_response",
+          "lang": "en",
+          "platform": "google",
+          "textToSpeech": "Sorry, I do not understand what you said."
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en",
+          "platform": "google",
+          "textToSpeech": "Could you perhaps say that again?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en-au",
+          "platform": "google",
+          "textToSpeech": "Sorry, I do not understand what you said."
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en-au",
+          "platform": "google",
+          "textToSpeech": "Could you perhaps say that again?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "de",
+          "platform": "google",
+          "textToSpeech": "Entschuldigung, ich verstehe nicht, was du gesagt hast."
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "de",
+          "platform": "google",
+          "textToSpeech": "Koenntest du das Bitte wiederholen?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "ja",
+          "platform": "google",
+          "textToSpeech": "すみません理解不能です"
+        }
+      
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": []
+}

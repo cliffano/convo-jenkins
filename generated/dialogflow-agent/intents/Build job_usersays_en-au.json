@@ -1,0 +1,67 @@
+[
+  
+  {
+    "data": [
+    
+      {
+        
+        "text": "Build job ",
+        "userDefined": false
+        
+      },
+    
+      {
+        
+        "text": "jobName",
+        "alias": "jobName",
+        "meta": "@jobName",
+        "userDefined": true
+        
+      },
+    
+      {
+        
+        "text": "",
+        "userDefined": false
+        
+      }
+    
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  
+  {
+    "data": [
+    
+      {
+        
+        "text": "Build a job named ",
+        "userDefined": false
+        
+      },
+    
+      {
+        
+        "text": "jobName",
+        "alias": "jobName",
+        "meta": "@jobName",
+        "userDefined": true
+        
+      },
+    
+      {
+        
+        "text": "",
+        "userDefined": false
+        
+      }
+    
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+  
+]

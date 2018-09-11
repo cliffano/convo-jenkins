@@ -1,0 +1,48 @@
+{
+  "name": "Find out how many busy executors",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+      
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    },
+    
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+      
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en-au",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+    
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1534984467,
+  "fallbackIntent": false,
+  "events": []
+}

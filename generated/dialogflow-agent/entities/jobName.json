@@ -1,0 +1,6 @@
+{
+  "name": "jobName",
+  "isOverridable": true,
+  "isEnum": true,
+  "automatedExpansion": true
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Welcome",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+      
+        {
+          "type": "simple_response",
+          "lang": "en",
+          "platform": "google",
+          "textToSpeech": "Hello, I am Jenkins"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en",
+          "platform": "google",
+          "textToSpeech": "How can I help you?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en-au",
+          "platform": "google",
+          "textToSpeech": "G&#39;day mate, I am Jenkins"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "en-au",
+          "platform": "google",
+          "textToSpeech": "How can I help you?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "de",
+          "platform": "google",
+          "textToSpeech": "Guten Tag, ich bin Jenkins"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "ja",
+          "platform": "google",
+          "textToSpeech": "こんにちは、私はジェンキンスです"
+        }
+      
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    },
+    {
+      "name": "GOOGLE_ASSISTANT_WELCOME"
+    }
+  ]
+}

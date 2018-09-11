@@ -1,0 +1,19 @@
+{
+  "name": "jenkins",
+  "version": "0.9.0",
+  "description": "Convo specification for Jenkins",
+  "main": "index.js",
+  "author": "Cliffano Subagio <blah@cliffano.com> (http://blog.cliffano.com)",
+  "license": "MIT",
+  "dependencies": {
+    
+    "swaggy-jenkins": "1.0.0",
+    
+    "convo-jenkins-helper": "0.0.1",
+    
+    "convo-node": "^0.0.2"
+  },
+  "devDependencies": {
+    "serverless-google-cloudfunctions": "^1.2.0"
+  }
+}
