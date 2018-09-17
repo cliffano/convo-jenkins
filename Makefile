@@ -40,6 +40,6 @@ gen-agent:
 
 package-agent:
 	mkdir -p stage
-	cd generated/dialogflow-agent && zip ../../stage/convo-jenkins.zip -r .
+	cd generated/dialogflow-agent && zip ../../stage/convo-jenkins-dialogflow-agent.zip -r .
 
 .PHONY: ci clean deps deps-local tools lint gen-middleware destroy-middleware gen-agent
