@@ -1,4 +1,6 @@
-ci: clean tools deps lint gen
+ci: clean tools deps lint gen package-agent
+
+build-local: clean gen deps-local deploy
 
 clean:
 	rm -rf generated/dialogflow-agent/*
@@ -12,10 +14,13 @@ deps-local:
 	cd ../convo-node && npm link
 	cd ../convo-jenkins-helper && npm link
 	cd ../convo-generator && npm link
-	cd generated/openapi-cloudfunctions-middleware && npm link convo-node && npm link convo-jenkins-helper
+	cd generated/openapi-cloudfunctions-middleware && \
+	  npm link convo-node && \
+		npm link convo-jenkins-helper && \
+		npm link generator-convo
 
 tools:
-	npm install -g serverless yaml-lint yo
+	npm install -g serverless@1.30.3 yaml-lint@1.2.4 yo@2.0.5
 
 lint:
 	yamllint specifications/*.yaml
@@ -27,10 +32,12 @@ deploy: deploy-middleware package-agent
 destroy: destroy-middleware
 
 gen-middleware:
-	cd generated/openapi-cloudfunctions-middleware && yo convo openapi-cloudfunctions-middleware ../../conf/env.yaml ../../specifications/convo-jenkins.yaml ../../specifications/openapi-jenkins.yaml --force
+	cd generated/openapi-cloudfunctions-middleware && \
+	  yo convo openapi-cloudfunctions-middleware ../../conf/env.yaml ../../specifications/convo-jenkins.yaml ../../specifications/openapi-jenkins.yaml --force && \
+		npm install .
 
 deploy-middleware:
-	cd generated/openapi-cloudfunctions-middleware && npm install . && serverless deploy
+	cd generated/openapi-cloudfunctions-middleware && serverless deploy
 
 destroy-middleware:
 	cd generated/openapi-cloudfunctions-middleware && serverless remove
