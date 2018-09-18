@@ -1,6 +1,6 @@
 ci: clean tools deps lint gen package-agent
 
-build-local: clean gen deps-local deploy
+build-local: clean deps-local gen deps-local deploy
 
 clean:
 	rm -rf generated/dialogflow-agent/*
