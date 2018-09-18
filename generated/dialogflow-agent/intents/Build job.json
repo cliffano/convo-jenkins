@@ -15,14 +15,6 @@
         "name": "jobName",
         "value": "$jobName",
         "isList": false
-      },
-      
-      {
-        "required": false,
-        "dataType": "@jobName",
-        "name": "jobName",
-        "value": "$jobName",
-        "isList": false
       }
       
       ],
@@ -48,7 +40,24 @@
         "name": "jobName",
         "value": "$jobName",
         "isList": false
-      },
+      }
+      
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en-au",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    },
+    
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
       
       {
         "required": false,
@@ -62,7 +71,32 @@
       "messages": [
         {
           "type": 0,
-          "lang": "en-au",
+          "lang": "de",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    },
+    
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+      
+      {
+        "required": false,
+        "dataType": "@jobName",
+        "name": "jobName",
+        "value": "$jobName",
+        "isList": false
+      }
+      
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "id",
           "speech": []
         }
       ],

@@ -5,23 +5,23 @@
     
       {
         
-        "text": "Build job ",
+        "text": "How many jobs are in your queue?",
         "userDefined": false
         
-      },
+      }
+    
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  
+  {
+    "data": [
     
       {
         
-        "text": "jobName",
-        "alias": "jobName",
-        "meta": "@jobName",
-        "userDefined": true
-        
-      },
-    
-      {
-        
-        "text": "",
+        "text": "How many queued jobs do you have?",
         "userDefined": false
         
       }

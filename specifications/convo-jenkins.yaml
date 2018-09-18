@@ -30,13 +30,16 @@ conversations:
   greetings:
     replies:
       en:
-        - Hello, I am Jenkins
+        - Hello, I am Jenkins.
         - How can I help you?
       en-au:
-        - G'day mate, I am Jenkins
+        - G'day mate, I am Jenkins.
         - How can I help you?
       de:
-        - Guten Tag, ich bin Jenkins
+        - Guten Tag, ich bin Jenkins.
+      id:
+        - Halo, saya Jenkins.
+        - Ada yang dapat saya bantu?
       ja:
         - こんにちは、私はジェンキンスです
   unknowns:
@@ -49,7 +52,10 @@ conversations:
         - Could you perhaps say that again?
       de:
         - Entschuldigung, ich verstehe nicht, was du gesagt hast.
-        - Koenntest du das Bitte wiederholen?
+        - Könntest du das Bitte wiederholen?
+      id:
+        - Maaf, saya tidak mengerti yang anda katakan.
+        - Bisa tolong diulang?
       ja:
         - すみません理解不能です
   queries:
@@ -57,10 +63,14 @@ conversations:
       messages:
         en:
           - What's your current version?
-          - Tell me the version installed on you
+          - Tell me what version is installed?
         en-au:
           - What's your current version?
-          - Tell me the version installed on you
+          - Tell me what version is installed?
+        de:
+          - Was ist deine aktuelle Version?
+        id:
+          - Anda sekarang versi berapa?
         ja:
           - あなたの現在のバージョンは何ですか？
       replies:
@@ -70,6 +80,10 @@ conversations:
         en-au:
           - My current version is {{headers.x-jenkins}}
           - I am on version {{headers.x-jenkins}}
+        de:
+          - Ich bin auf Version {{headers.x-jenkins}}
+        id:
+          - Saya sekarang menggunakan versi {{headers.x-jenkins}}
         ja:
           - 私の現在のバージョンは{{headers.x-jenkins}}です
       openapi_cloudfunctions:
@@ -100,16 +114,39 @@ conversations:
           - I have {{data.busyExecutors}} executors
       openapi_cloudfunctions:
         operation_id: getComputer
+    - name: Find out how many queued jobs
+      messages:
+        en:
+          - How many jobs are in your queue?
+          - How many queued jobs do you have?
+        en-au:
+          - How many jobs are in your queue?
+          - How many queued jobs do you have?
+      replies:
+        en:
+          - I have {{count(data.items)}} jobs in the queue
+        en-au:
+          - I have {{count(data.items)}} jobs in the queue
+      openapi_cloudfunctions:
+        operation_id: getQueue
     - name: Build job
       messages:
         en:
           - Build job {{jobName}}
-          - Build a job named {{jobName}}
         en-au:
           - Build job {{jobName}}
-          - Build a job named {{jobName}}
+        de:
+          - Fügen Job {{jobName}} zur Warteschlange hinzu
+        id:
+          - Jalankan pekerjaan {{jobName}}
       replies:
+        en:
+          - Job {{jobName}} has been added to the queue.
         en-au:
-          - Job {{jobName}} has been added to the queue
+          - Job {{jobName}} has been added to the queue.
+        de:
+          - Job {{jobName}} wurde hinzugefugt.
+        id:
+          - Pekerjaan {{jobName}} sudah ditambahkan ke antrian.
       openapi_cloudfunctions:
         operation_id: postJobBuild

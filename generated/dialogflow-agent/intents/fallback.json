@@ -49,7 +49,21 @@
           "type": "simple_response",
           "lang": "de",
           "platform": "google",
-          "textToSpeech": "Koenntest du das Bitte wiederholen?"
+          "textToSpeech": "Könntest du das Bitte wiederholen?"
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "id",
+          "platform": "google",
+          "textToSpeech": "Maaf, saya tidak mengerti yang anda katakan."
+        },
+      
+        {
+          "type": "simple_response",
+          "lang": "id",
+          "platform": "google",
+          "textToSpeech": "Bisa tolong diulang?"
         },
       
         {

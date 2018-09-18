@@ -5,7 +5,7 @@
     
       {
         
-        "text": "What&#39;s your current version?",
+        "text": "What's your current version?",
         "userDefined": false
         
       }
@@ -21,7 +21,7 @@
     
       {
         
-        "text": "Tell me the version installed on you",
+        "text": "Tell me what version is installed?",
         "userDefined": false
         
       }

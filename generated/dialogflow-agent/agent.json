@@ -21,7 +21,7 @@
   },
   "defaultTimezone": "Australia/Sydney",
   "webhook": {
-    "url": "https://region-overwrite-me-cloudfunctions-project-id.cloudfunctions.net/dialogflow",
+    "url": "https://region-overwrite-me-cloudfunction-project-id.cloudfunctions.net/dialogflow",
     "headers": {
       "User-Agent": "convo-dialogflow-agent",
       "Convo-Token": "overwrite-me-convo-token"
@@ -35,7 +35,17 @@
   "customClassifierMode": "use.after",
   "mlMinConfidence": 0.3,
   "supportedLanguages": [
-    "de"
+  
+    "en",
+  
+    "en-au",
+  
+    "de",
+  
+    "id",
+  
+    "ja"
+  
   ],
   "onePlatformApiVersion": "v2",
   "analyzeQueryTextSentiment": false,
