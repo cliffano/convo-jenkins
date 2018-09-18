@@ -4,5 +4,3 @@ generated/openapi-cloudfunctions-middleware/.serverless
 generated/openapi-cloudfunctions-middleware/node_modules
 stage/
 *.log
-conf/env.yaml
-generated/openapi-cloudfunctions-middleware/index.js
