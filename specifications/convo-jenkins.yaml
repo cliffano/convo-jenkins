@@ -22,7 +22,7 @@ middlewares:
       - name: swaggy-jenkins
         version: 1.0.0
       - name: convo-jenkins-helper
-        version: 0.0.1
+        version: 0.0.2
 agents:
   dialogflow:
     project_id: convo-jenkins
