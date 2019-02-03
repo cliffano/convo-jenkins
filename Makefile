@@ -15,6 +15,9 @@ deps-local:
 	cd ../convo-node && npm link
 	cd ../convo-jenkins-helper && npm link
 	cd ../convo-generator && npm link
+	npm link convo-node
+	npm link convo-jenkins-helper
+	npm link generator-convo
 	cd generated/openapi-cloudfunctions-middleware && \
 		npm link convo-node && \
 		npm link convo-jenkins-helper && \
