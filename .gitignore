@@ -5,4 +5,6 @@ generated/openapi-cloudfunctions-middleware/node_modules
 stage/
 *.log
 conf/env.yaml
+conf/credentials.json
 generated/openapi-cloudfunctions-middleware/index.js
+node_modules/
