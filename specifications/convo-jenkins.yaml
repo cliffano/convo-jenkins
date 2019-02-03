@@ -18,6 +18,7 @@ middlewares:
         helper: convo-jenkins-helper
     cloudfunctions:
       project_id: convo-jenkins
+      credentials: ~/dev/workspace-studio/convo-jenkins/conf/credentials.json
     dependencies:
       - name: swaggy-jenkins
         version: 1.0.0
