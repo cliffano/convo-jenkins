@@ -110,12 +110,12 @@ function handleRequest(agent, request, response) {
           
             case 'en':
               console.info('Calling API: %s, with method: %s', 'remoteAccessApi', 'headJenkins');
-              callApi(remoteAccessApi, 'headJenkins', queryParams, 'I am on version {{headers.x-jenkins}}', convoOpts, done);
+              callApi(remoteAccessApi, 'headJenkins', queryParams, 'My current version is {{headers.x-jenkins}}', convoOpts, done);
               break;
           
             case 'en-au':
               console.info('Calling API: %s, with method: %s', 'remoteAccessApi', 'headJenkins');
-              callApi(remoteAccessApi, 'headJenkins', queryParams, 'I am on version {{headers.x-jenkins}}', convoOpts, done);
+              callApi(remoteAccessApi, 'headJenkins', queryParams, 'My current version is {{headers.x-jenkins}}', convoOpts, done);
               break;
           
             case 'de':

@@ -6,7 +6,7 @@ provider:
   # node 8 allows console.debug which is handy for logging payloads.
   runtime: nodejs
   project: convo-jenkins
-  credentials: ~/.gcloud/keyfile.json # path needs to be absolute
+  credentials: ~/dev/workspace-studio/convo-jenkins/conf/credentials.json # path needs to be absolute
 
 plugins:
   - serverless-google-cloudfunctions

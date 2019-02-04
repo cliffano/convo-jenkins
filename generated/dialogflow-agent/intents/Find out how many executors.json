@@ -3,7 +3,6 @@
   "auto": true,
   "contexts": [],
   "responses": [
-    
     {
       "resetContexts": false,
       "affectedContexts": [],
@@ -11,36 +10,38 @@
       
       ],
       "messages": [
+        
         {
           "type": 0,
           "lang": "en",
-          "speech": []
-        }
-      ],
-      "defaultResponsePlatforms": {},
-      "speech": []
-    },
-    
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-      
-      ],
-      "messages": [
+          "speech": [
+          
+            "I have {{data.totalExecutors}} executors"
+          
+          
+          ]
+        },
+        
         {
           "type": 0,
           "lang": "en-au",
-          "speech": []
+          "speech": [
+          
+            "I have {{data.totalExecutors}} executors"
+          
+          
+          ]
         }
+        
       ],
       "defaultResponsePlatforms": {},
       "speech": []
     }
-    
   ],
   "priority": 500000,
+  
   "webhookUsed": true,
+  
   "webhookForSlotFilling": false,
   "lastUpdate": 1534984467,
   "fallbackIntent": false,

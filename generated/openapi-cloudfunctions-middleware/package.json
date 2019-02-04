@@ -9,9 +9,9 @@
     
     "swaggy-jenkins": "1.0.0",
     
-    "convo-jenkins-helper": "0.0.1",
+    "convo-jenkins-helper": "0.0.2",
     
-    "convo-node": "^0.0.2"
+    "convo-node": "^0.0.3"
   },
   "devDependencies": {
     "serverless-google-cloudfunctions": "^1.2.0"

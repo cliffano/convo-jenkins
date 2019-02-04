@@ -3,7 +3,6 @@
   "auto": true,
   "contexts": [],
   "responses": [
-    
     {
       "resetContexts": false,
       "affectedContexts": [],
@@ -15,98 +14,88 @@
         "name": "jobName",
         "value": "$jobName",
         "isList": false
+      },
+      
+      {
+        "required": false,
+        "dataType": "@jobName",
+        "name": "jobName",
+        "value": "$jobName",
+        "isList": false
+      },
+      
+      {
+        "required": false,
+        "dataType": "@jobName",
+        "name": "jobName",
+        "value": "$jobName",
+        "isList": false
+      },
+      
+      {
+        "required": false,
+        "dataType": "@jobName",
+        "name": "jobName",
+        "value": "$jobName",
+        "isList": false
       }
       
       ],
       "messages": [
+        
         {
           "type": 0,
           "lang": "en",
-          "speech": []
-        }
-      ],
-      "defaultResponsePlatforms": {},
-      "speech": []
-    },
-    
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-      
-      {
-        "required": false,
-        "dataType": "@jobName",
-        "name": "jobName",
-        "value": "$jobName",
-        "isList": false
-      }
-      
-      ],
-      "messages": [
+          "speech": [
+          
+            "Job {{jobName}} has been added to the queue."
+          
+          
+          ]
+        },
+        
         {
           "type": 0,
           "lang": "en-au",
-          "speech": []
-        }
-      ],
-      "defaultResponsePlatforms": {},
-      "speech": []
-    },
-    
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-      
-      {
-        "required": false,
-        "dataType": "@jobName",
-        "name": "jobName",
-        "value": "$jobName",
-        "isList": false
-      }
-      
-      ],
-      "messages": [
+          "speech": [
+          
+            "Job {{jobName}} has been added to the queue."
+          
+          
+          ]
+        },
+        
         {
           "type": 0,
           "lang": "de",
-          "speech": []
-        }
-      ],
-      "defaultResponsePlatforms": {},
-      "speech": []
-    },
-    
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-      
-      {
-        "required": false,
-        "dataType": "@jobName",
-        "name": "jobName",
-        "value": "$jobName",
-        "isList": false
-      }
-      
-      ],
-      "messages": [
+          "speech": [
+          
+            "Job {{jobName}} wurde hinzugefugt."
+          
+          
+          ]
+        },
+        
         {
           "type": 0,
           "lang": "id",
-          "speech": []
+          "speech": [
+          
+            "Pekerjaan {{jobName}} sudah ditambahkan ke antrian."
+          
+          
+          ]
         }
+        
       ],
       "defaultResponsePlatforms": {},
       "speech": []
     }
-    
   ],
   "priority": 500000,
+  
   "webhookUsed": true,
+  
   "webhookForSlotFilling": false,
   "lastUpdate": 1534984467,
   "fallbackIntent": false,
