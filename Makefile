@@ -3,13 +3,13 @@ ci: clean tools deps lint gen package-agent
 build-local: clean deps-local gen deps-local deploy
 
 clean:
-	rm -rf generated/dialogflow-agent/*
-	rm -rf generated/openapi-cloudfunctions-middleware/*
-	rm -rf stage
+	rm -rf generated/dialogflow-agent/* \
+		generated/openapi-cloudfunctions-middleware/* \
+		stage/
 
 deps:
 	curl https://raw.githubusercontent.com/cliffano/swaggy-jenkins/master/spec/jenkins-api.yml -o specifications/openapi-jenkins.yaml
-	npm install convo-node@0.0.3 convo-jenkins-helper@0.0.2 generator-convo@0.0.3
+	npm install convo-node@0.0.3 convo-jenkins-helper@0.0.2 generator-convo@0.0.4
 
 deps-local:
 	cd ../convo-node && npm link
